@@ -17,6 +17,8 @@
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/runtime": "^7.6.2",
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
     "@react-native-community/eslint-config": "^0.0.5",
     "@types/jest": "^24.0.24",
     "@types/react-native": "^0.60.25",
@@ -25,6 +27,7 @@
     "@typescript-eslint/parser": "^2.12.0",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
+    "husky": "^4.2.3",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "react-test-renderer": "16.9.0",
@@ -39,6 +42,12 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "husky": {
+      "hooks": {
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+        "pre-commit": "pretty-quick --staged && lint-staged"
+      }
+    }
   }
 }
