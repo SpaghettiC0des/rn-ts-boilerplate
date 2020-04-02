@@ -18,11 +18,13 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {ScreenFC} from 'react-native-navigation-register-screens';
+
 import styles from './styles/AppStyles';
 
 declare var global: {HermesInternal: null | {}};
 
-const App = () => {
+const App: ScreenFC = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -69,5 +71,7 @@ const App = () => {
     </>
   );
 };
+
+App.screenName = 'MainScreen';
 
 export default App;

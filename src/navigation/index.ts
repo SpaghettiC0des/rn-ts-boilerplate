@@ -1,7 +1,9 @@
 import {Navigation} from 'react-native-navigation';
 import App from 'containers/App';
+import registerScreens from 'react-native-navigation-register-screens';
 
-Navigation.registerComponent('MainScreen', () => App);
+registerScreens([App]);
+
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
