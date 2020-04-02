@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -15,6 +15,9 @@
     "axios": "^0.19.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-navigation": "^6.4.0",
+    "react-native-navigation-hooks": "^5.0.0",
+    "react-native-navigation-register-screens": "^1.0.7",
     "react-native-rename": "^2.4.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
@@ -56,12 +59,12 @@
       "jsx",
       "json",
       "node"
-    ],
-    "husky": {
-      "hooks": {
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-        "pre-commit": "pretty-quick --staged && lint-staged"
-      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
