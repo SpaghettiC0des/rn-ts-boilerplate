@@ -1,3 +1,2 @@
-#### Navigation styles folder
-
-All navigation related styles will go here.
+### Styles Folder
+Navigation styles are separated from functionality.
