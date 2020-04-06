@@ -1135,6 +1135,11 @@
   dependencies:
     stacktrace-js "^2.0.0"
 
+"@react-native-firebase/perf@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/perf/-/perf-6.4.0.tgz#b07bc86c0c2eacdf20582424322029fedb1a7beb"
+  integrity sha512-bI80TNBmoFmc/9XaQ+aedgHQ3Ew5Lgzbs5CTGWqdzfuHzxSFRnA1FGxmyx2/lN+c05FRAGteTeC2ODFyLma5sw==
+
 "@redux-saga/core@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@redux-saga/core/-/core-1.1.3.tgz#3085097b57a4ea8db5528d58673f20ce0950f6a4"
