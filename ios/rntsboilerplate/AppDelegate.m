@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import <ReactNativeNavigation/ReactNativeNavigation.h>
+#import <Firebase.h>
 
 #import <React/RCTBundleURLProvider.h>
 
@@ -14,6 +15,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  if ([FIRApp defaultApp] == nil) {
+    [FIRApp configure];
+  }
   [ReactNativeNavigation bootstrapWithDelegate:self launchOptions:launchOptions];
   return YES;
 }
