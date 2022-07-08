@@ -8,11 +8,13 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "reset-watchman": "watchman watch-del . ; watchman watch-project ."
+    "reset-watchman": "watchman watch-del . ; watchman watch-project .",
+    "pod:m1": "cd ios && USE_FABRIC=1 RCT_NEW_ARCH_ENABLED=1 arch -x86_64 pod install --repo-update && cd .."
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.69.1"
+    "react-native": "0.69.1",
+    "react-native-reanimated": "3.0.0-rc.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

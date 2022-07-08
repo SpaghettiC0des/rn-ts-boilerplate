@@ -9,7 +9,9 @@ const moduleResolver = [
   },
 ];
 
+const reanimated = 'react-native-reanimated/plugin';
+
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
-  plugins: [moduleResolver],
+  plugins: [moduleResolver, reanimated],
 };
